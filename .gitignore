@@ -15,3 +15,8 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+/letCode/letCode/allure-results/
+/letCode/letCode/execution-summary/
+/letCode/letCode/extent-reports/
+/letCode/letCode/generate_allure_report.bat
+/.idea/
