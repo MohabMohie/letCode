@@ -17,7 +17,7 @@ public class Signup {
 
 
     public Signup (){
-        driver = Driver.get();
+        driver = Driver.getDriver().get();
     }
 
     @Step("I Navigate to the Signup page")

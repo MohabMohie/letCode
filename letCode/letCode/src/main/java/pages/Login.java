@@ -15,7 +15,7 @@ public class Login {
     private final By login_button = SHAFT.GUI.Locator.hasTagName("button").hasText("LOGIN").build();
 
     public Login (){
-        driver = Driver.get();
+        driver = Driver.getDriver().get();
     }
 
     @Step("I Navigate to the Login page")

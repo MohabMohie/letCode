@@ -32,14 +32,14 @@ The objective is to demo a complete end-to-end test automation solution.
 1. dd
 
 ## Prerequisites
-- Latest version from IntelliJ IDEA.
-- Latest Java 17 LTE.
+- Latest stable version from IntelliJ IDEA Community Edition.
+- Latest Java 17 LTS.
 
 ## Execution
 1. Import the project from Git to your IntelliJ.
 2. Allow the project to finish building and fetching dependencies.
 3. Run `mvn -f letCode/letCode/ clean test` to execute all the test scenarios.
-4. You can run the `src/test/java/TestRunner.java` class.
+4. You can execute the `src/test/java/TestRunner.java` class.
 5. After execution is finished, the execution report will open automatically in your default browser.
 6. You can run any scenario/feature from the `src/test/resources/*.feature` files. [^1] (Note: Report will not open automatically in that case.)
 7. You can modify the target browser, operating system, or other properties via the `src/main/resources/properties/custom.properties` file.

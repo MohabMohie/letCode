@@ -1,5 +1,8 @@
 Feature: Login
 
+  Background:
+    Given The target browser is ready
+
   # 3. Login User with correct email and password
   Scenario: Given that I'm already registered, when I login using valid credentials, then I get the relevant success message.
     Given I'm already registered

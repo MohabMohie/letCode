@@ -1,5 +1,8 @@
 Feature: Register
 
+  Background:
+    Given The target browser is ready
+
   # 1. Register User
   Scenario: Given that I'm not registered, when I register using valid and unique data, then I get the relevant success message.
     When I register using valid and unique data

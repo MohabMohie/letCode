@@ -15,7 +15,7 @@ public class Home {
     private final By signOut_button = SHAFT.GUI.Locator.hasTagName("a").hasText("Sign out").build();
 
     public Home (){
-        driver = Driver.get();
+        driver = Driver.getDriver().get();
     }
 
     @Step("I Navigate Home")
@@ -28,28 +28,35 @@ public class Home {
     @Step("I am logged in successfully")
     @Then("I am logged in successfully")
     public Home validateSuccessfulLogin(){
-        return validateAlertText("(Welcome) .*|(You have logged in).*");
+        return validateAlertTextMatches("(Welcome) .*|(You have logged in).*");
     }
 
     @Step("I get the error message \"{errorMessage}\"")
     @Then("I get the error message {string}")
     public Home iGetTheErrorMessage(String errorMessage) {
-        return validateAlertText(errorMessage);
+        return validateAlertTextMatches(errorMessage);
+    }
+
+    @Step("I validate the alert to match the regex \"{expectedText}\"")
+    @Then("I validate the alert to match the regex {string}")
+    private Home validateAlertTextMatches(String expectedText){
+        driver.element().assertThat(alert_div).text().matchesRegex(expectedText)
+                .withCustomReportMessage("Assert the alert to match the regex \""+expectedText+"\"").perform();
+        return this;
     }
 
     @Step("I validate the alert to contain the text \"{expectedText}\"")
     @Then("I validate the alert to contain the text {string}")
-    private Home validateAlertText(String expectedText){
-        driver.element().assertThat(alert_div).text().matchesRegex(expectedText)
-                .withCustomReportMessage("Assert the alert to match the regex \""+expectedText+"\"").perform();
-        closeAlertIfOpen();
+    private Home validateAlertTextContains(String expectedText){
+        driver.element().assertThat(alert_div).text().contains(expectedText)
+                .withCustomReportMessage("Assert the alert to contain the text \""+expectedText+"\"").perform();
         return this;
     }
 
     @Step("I Sign out")
     @When("I Sign out")
     public Home signOut(){
-        closeAlertIfOpen();
+        closeAnyOpenAlert();
         driver.element().click(signOut_button);
         return this;
     }
@@ -57,13 +64,10 @@ public class Home {
     @Step("I am logged out successfully")
     @Then("I am logged out successfully")
     public Home iAmLoggedOutSuccessfully() {
-        return validateAlertText("Bye! See you soon :)");
+        return validateAlertTextContains("Bye! See you soon :)");
     }
 
-    public Home closeAlertIfOpen(){
-        if (driver.getDriver().findElements(closeAlert_button).size() > 1) {
-            driver.element().click(closeAlert_button);
-        }
-        return this;
+    private void closeAnyOpenAlert(){
+        driver.element().click(closeAlert_button);
     }
 }
