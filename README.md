@@ -58,7 +58,7 @@ The objective is to demo a complete end-to-end test automation solution.
 <br/>- After saving the changes, remember to delete any old runs you may have triggered by mistake before adding the needed config.
 
 ## CI/CD & Cloud Device Farm Integration
-This project also demonstrates its CI/CD and Cloud Device Farm integration capabilities by using GitHub Actions, Selenium Grid, and BrowserStack.
+This project also demonstrates its CI/CD and Cloud Device Farm integration capabilities, and its cross-platform compatibility by using GitHub Actions, Selenium Grid, and BrowserStack to run against Windows, Linux, Mac & Chrome, Edge, Safari.
 - You can examine this file `.github/workflows/e2eTests.yml` for more details about the github actions pipeline.
 - You can examine this file `.github/docker-compose/selenium4grid.yml` for more details about the dockerized selenium grid.
 - You can navigate to [this link](https://github.com/MohabMohie/letCode/actions/workflows/e2eTests.yml) or to the Actions tab to view the latest test runs and download the test execution reports.
