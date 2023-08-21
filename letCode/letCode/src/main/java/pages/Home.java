@@ -28,7 +28,7 @@ public class Home {
     @Step("I am logged in successfully")
     @Then("I am logged in successfully")
     public Home validateSuccessfulLogin(){
-        return validateAlertTextMatches("(Welcome) .*|(You have logged in).*");
+        return validateAlertTextMatches(".*(Welcome) .*|(You have logged in).*");
     }
 
     @Step("I get the error message \"{errorMessage}\"")

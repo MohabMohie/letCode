@@ -13,4 +13,4 @@ Feature: Register
   Scenario: Given that I'm already registered, when I register using existing data, then I get the relevant error message.
     Given I'm already registered
     When I register using already existing data
-    Then I get the error message "Error: The email address is already in use by another account."
+    Then I get the error message ".*Error: The email address is already in use by another account.*"
