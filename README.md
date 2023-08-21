@@ -56,3 +56,15 @@ The objective is to demo a complete end-to-end test automation solution.
 <br/>- Select <b>Cucumber Java</b> > Program Arguments > and add this argument:
 <br/>`--plugin com.shaft.listeners.CucumberFeatureListener`
 <br/>- After saving the changes, remember to delete any old runs you may have triggered by mistake before adding the needed config.
+
+## CI/CD & Cloud Device Farm Integration
+This project also demonstrates its CI/CD and Cloud Device Farm integration capabilities by using GitHub Actions, Selenium Grid, and BrowserStack.
+- You can examine this file `.github/workflows/e2eTests.yml` for more details about the github actions pipeline.
+- You can examine this file `.github/docker-compose/selenium4grid.yml` for more details about the dockerized selenium grid.
+
+## Final Notes
+- I hope you find this project satisfactory and informative.
+- Feel free to reach-out if you need any further support or if you have collaboration opportunities.
+- Here's a link to my profile [GitHub/MohabMohie](https://github.com/MohabMohie)
+- Kindly note that I'm the creator and one of 35 maintainers for [SHAFT_Engine](https://github.com/shafthq/SHAFT_ENGINE); the framework used under this sample project.
+- Kindly note that [SHAFT_Engine](https://github.com/shafthq/SHAFT_ENGINE) is listed as [one of 15 official selenium webdriver ecosystem frameworks](https://www.selenium.dev/ecosystem/#frameworks).
