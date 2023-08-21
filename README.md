@@ -61,6 +61,7 @@ The objective is to demo a complete end-to-end test automation solution.
 This project also demonstrates its CI/CD and Cloud Device Farm integration capabilities by using GitHub Actions, Selenium Grid, and BrowserStack.
 - You can examine this file `.github/workflows/e2eTests.yml` for more details about the github actions pipeline.
 - You can examine this file `.github/docker-compose/selenium4grid.yml` for more details about the dockerized selenium grid.
+- You can navigate to [this link](https://github.com/MohabMohie/letCode/actions/workflows/e2eTests.yml) or to the Actions tab to view the latest test runs and download the test execution reports.
 
 ## Final Notes
 - I hope you find this project satisfactory and informative.
