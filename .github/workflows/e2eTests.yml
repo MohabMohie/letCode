@@ -74,7 +74,7 @@ jobs:
       - name: Run tests on Windows
         if: runner.os == 'Windows'
         continue-on-error: true
-        run: mvn clean test "-DretryMaximumNumberOfAttempts=2" "-DexecutionAddress=local" "-DtargetOperatingSystem=WINDOWS" -DtargetBrowserName="MicrosoftEdge" "-DmaximumPerformanceMode=2" "-DgenerateAllureReportArchive=true" -f "${PROJECT_SUB_DIR}"
+        run: mvn -f "${{ env.PROJECT_SUB_DIR }}" clean test "-DretryMaximumNumberOfAttempts=2" "-DexecutionAddress=local" "-DtargetOperatingSystem=WINDOWS" -DtargetBrowserName="MicrosoftEdge" "-DmaximumPerformanceMode=2" "-DgenerateAllureReportArchive=true"
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
