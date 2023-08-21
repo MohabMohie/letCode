@@ -47,13 +47,13 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Ubuntu_Chrome_Cucumber_Grid_Allure
-          path: "${PROJECT_SUB_DIR}generatedReport_*.zip"
+          path: "${PROJECT_SUB_DIR}""generatedReport_*.zip"
       - name: Upload Execution Summary Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: Ubuntu_Chrome_Cucumber_Grid_Summary
-          path: "${PROJECT_SUB_DIR}execution-summary/ExecutionSummaryReport_*.html"
+          path: "${PROJECT_SUB_DIR}""execution-summary/ExecutionSummaryReport_*.html"
 
   Windows_Edge_Cucumber:
     runs-on: windows-latest
@@ -87,13 +87,13 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Windows_Edge_Cucumber_Allure
-          path: "${PROJECT_SUB_DIR}generatedReport_*.zip"
+          path: "${PROJECT_SUB_DIR}""generatedReport_*.zip"
       - name: Upload Execution Summary Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: Windows_Edge_Cucumber_Summary
-          path: "${PROJECT_SUB_DIR}execution-summary/ExecutionSummaryReport_*.html"
+          path: "${PROJECT_SUB_DIR}""execution-summary/ExecutionSummaryReport_*.html"
 
   MacOSX_Safari_Cucumber_BrowserStack:
     runs-on: macOS-12
@@ -126,10 +126,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: MacOSX_Safari_Cucumber_BrowserStack_Allure
-          path: "${PROJECT_SUB_DIR}generatedReport_*.zip"
+          path: "${PROJECT_SUB_DIR}""generatedReport_*.zip"
       - name: Upload Execution Summary Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: MacOSX_Safari_Cucumber_BrowserStack_Summary
-          path: "${PROJECT_SUB_DIR}execution-summary/ExecutionSummaryReport_*.html"
+          path: "${PROJECT_SUB_DIR}""execution-summary/ExecutionSummaryReport_*.html"
