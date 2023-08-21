@@ -18,6 +18,7 @@ The objective is to demo a complete end-to-end test automation solution.
 
 ## Testing checklist
 - Business scenarios:
+  - The objective of these scenarios is to implement gherkin design best practices and re-usability
 
 1. Register User -> `src/test/resources/features/register.feature`
 2. Register User with existing email -> `src/test/resources/features/register.feature`
@@ -28,8 +29,11 @@ The objective is to demo a complete end-to-end test automation solution.
 
 
 - Technical demo scenarios: `src/test/resources/features/technicalDemo.feature`
-
-1. dd
+  - The objective of these scenarios is to demo some technical capabilities of the SHAFT framework without focusing on best practices or re-usability
+7. Element visual assertion
+8. Element attribute assertion
+9. Element CSS property assertion
+10. Element steps
 
 ## Prerequisites
 - Latest stable version from IntelliJ IDEA Community Edition.
@@ -39,6 +43,8 @@ The objective is to demo a complete end-to-end test automation solution.
 1. Import the project from Git to your IntelliJ.
 2. Allow the project to finish building and fetching dependencies.
 3. Run `mvn -f letCode/letCode/ clean test` to execute all the test scenarios.
+   - Run `mvn -f letCode/letCode/ clean test -Dcucumber.filter.tags=@business` to execute the login and registration business scenarios.
+   - Run `mvn -f letCode/letCode/ clean test -Dcucumber.filter.tags=@technical` to execute the technical scenarios.
 4. You can execute the `src/test/java/TestRunner.java` class.
 5. After execution is finished, the execution report will open automatically in your default browser.
 6. You can run any scenario/feature from the `src/test/resources/*.feature` files. [^1] (Note: Report will not open automatically in that case.)

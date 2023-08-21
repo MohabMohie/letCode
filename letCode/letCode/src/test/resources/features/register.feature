@@ -1,3 +1,4 @@
+@business
 Feature: Register
 
   Background:
